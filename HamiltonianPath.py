@@ -39,6 +39,7 @@ def parse_input(file_path):
 
     return adj_list
 
+
 def adjacency_to_cnf_to_file(adj_list, vert_count, file_name, print_cnf):
     #pouzijeme znacni jako kdyz chceme uporadani vrcholu, tedy pij kde i-ty vrchol na j-te pozici
     #mame n pozic pro cestu o n vrcholech tedy n*n znaku
@@ -47,7 +48,6 @@ def adjacency_to_cnf_to_file(adj_list, vert_count, file_name, print_cnf):
     n = vert_count
     
     # base podminky na hamiltonovu cestu
-
     # na kazde pozici je jen jeden vrchol
     for j in range(1, n + 1):
         clause = [j + i * n for i in range(n)]
@@ -80,9 +80,9 @@ def adjacency_to_cnf_to_file(adj_list, vert_count, file_name, print_cnf):
 
     # starting and ending point
     if STARTV > 0 and STARTV <= VERT_COUNT:
-        cnf.append([1+((STARTV-1)*VERT_COUNT)])
         # print("STARTV: ", STARTV)
         # print([1+(STARTV-1)*VERT_COUNT])
+        cnf.append([1+((STARTV-1)*VERT_COUNT)])
     if ENDV > 0 and ENDV <= VERT_COUNT:
         # print("ENDV: ", ENDV)
         # print([VERT_COUNT*ENDV])
@@ -102,6 +102,7 @@ def adjacency_to_cnf_to_file(adj_list, vert_count, file_name, print_cnf):
         for clause in cnf:
             file.write(" ".join(map(str, clause)) + " 0\n")
 
+
 def call_solver(output_name, solver_name, verbosity):
     solver_path = solver_name + ".exe" # running the windoews executable, not the unix binary
 
@@ -109,6 +110,7 @@ def call_solver(output_name, solver_name, verbosity):
 
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return result
+
 
 def call_solverWSL( output_name, solver_name, verbosity):
     #running the solver from example in WSL
@@ -122,6 +124,7 @@ def call_solverWSL( output_name, solver_name, verbosity):
 
     result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return result
+
 
 def print_result(result):
     for line in result.stdout.decode('utf-8').split('\n'):
@@ -160,6 +163,7 @@ def print_result(result):
     for i in range(1, VERT_COUNT):
         print(path[i], end=" -> ")
     print(path[VERT_COUNT])
+
 
 if __name__ == "__main__":
 
