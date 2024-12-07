@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "HamiltonianPath", "HamiltonianPath.pyproj", "{BBBC1159-4EF5-4E2C-86E0-4F02BDC310EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBBC1159-4EF5-4E2C-86E0-4F02BDC310EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBBC1159-4EF5-4E2C-86E0-4F02BDC310EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CECF8B6-732A-4E96-A0C2-58CEE07C8799}
+	EndGlobalSection
+EndGlobal
