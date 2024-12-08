@@ -75,6 +75,9 @@ Command-line options:
 
 ## Example instances
 
-* `graph.in`
+* `splnitelny_long.in`
+* `splnitelny_small.in`
+* `nesplnitelny_small.in`
 
-
+## Experiments
+the splnitelny_long.in by měl trvat víc než 10 s testoval jsem víckrát a dostal jem 16, 13, 3, 12, 6, 5 sekund 3krát víc jak 10 ale 3krát méně

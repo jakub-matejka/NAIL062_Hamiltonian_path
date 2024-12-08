@@ -12,7 +12,7 @@
     <Name>HamiltonianPath</Name>
     <RootNamespace>HamiltonianPath</RootNamespace>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>-o "form.cnf"</CommandLineArguments>
+    <CommandLineArguments>-i nesplnitelny_small.in</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
