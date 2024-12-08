@@ -13,6 +13,7 @@ def parse_input(file_path):
     with open(file_path, 'r') as file:
         fl = file.readline().strip().split()
 
+        # get vc (and sv,ev) from the first line
         a = 0
         for i in fl:
             if a == 0:
@@ -50,25 +51,25 @@ def adjacency_to_cnf_to_file(adj_list, vert_count, file_name, print_cnf):
     # base podminky na hamiltonovu cestu
     # na kazde pozici je jen jeden vrchol
     for j in range(1, n + 1):
-        clause = [j + i * n for i in range(n)]
+        clause = [j + i * n for i in range(n)]  #bud p_v1_i nebo p_v2_i nebo ... nebo p_vn_i  pro kazde i
         cnf.append(clause)
 
     # na pozici max 1 vrchol
     for j in range(1, n + 1):
         for i in range(n):
             for k in range(i + 1, n):
-                cnf.append([-(j + i * n), -(j + k * n)])
+                cnf.append([-(j + i * n), -(j + k * n)])  #ne na dvou zaroven pro vsechny dvojce z prev
 
     # kazdy bod bude v ceste jednou (alespon na jedne pozici)
     for i in range(n):
-        clause = [j + i * n for j in range(1, n + 1)]
+        clause = [j + i * n for j in range(1, n + 1)]   #bud p_v_1 nebo p_v_2 nebo ... nebo p_v_n
         cnf.append(clause)
 
     # max jednou (jen na jedne)
     for i in range(n):
         for j in range(1, n + 1):
             for k in range(j + 1, n + 1):
-                cnf.append([-(j + i * n), -(k + i * n)])
+                cnf.append([-(j + i * n), -(k + i * n)])  #ne na dvou zaroven pro vsechny dvojce z prev
 
     # +podminky z naseho input
     # pokud vrcholy nejsou spojene hranou tak nebudou v ceste za sebou
@@ -104,7 +105,7 @@ def adjacency_to_cnf_to_file(adj_list, vert_count, file_name, print_cnf):
 
 
 def call_solver(output_name, solver_name, verbosity):
-    solver_path = solver_name + ".exe" # running the windoews executable, not the unix binary
+    solver_path = solver_name + ".exe" # running the windows executable, not the unix binary
 
     cmd = [solver_path, "-model", "-verb=" + str(verbosity), output_name]
 
