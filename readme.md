@@ -38,9 +38,10 @@ An examples of a valid input format is:
 
 if there exists hamiltonian path it will write it out like this:
 4 -> 1 -> 3 -> 2
+above that there will be listed vertecies with their number in the path
 
 ## Encoding
-pouzijeme znaceni jako kdyz chceme uporadani vrcholu, tedy p_i_j kde i-ty vrchol na j-te pozici
+pouzivam znaceni jako kdyz jsme chtěli uporadani vrcholu na cviku, tedy p_i_j kde i-ty vrchol na j-te pozici
 mame n pozic pro cestu o n vrcholech tedy n*n znaku
 postupně p_1_1, p_1_2, ... p_2_1
 zakladni podminky na hamiltonovu cestu:
@@ -87,8 +88,8 @@ Command-line options:
 ## Experiments
 program běžel na processoru amd ryzen 5800H (3-4 GHz)
 
-splnitelny_long.in by měl trvat víc než 10 s testoval jsem víckrát a dostal jem 16, 13, 3, 12, 6, 5 sekund 3krát víc jak 10 ale 3krát méně
+splnitelny_long.in by měl trvat víc než 10 s testoval jsem víckrát a dostal jem 16, 13, 3, 12, 6, 5, 2 sekund 3krát víc jak 10 ale 4krát méně
 
 splnitelny_long2.in 2 trval 15 vteřin jednou 29 a jednou 8 vteřin
 
-splnitelny_long3.in nejdelší co jsem zkoušel trval průměrně okolo 20 sekund
+splnitelny_long3.in nejdelší co jsem zkoušel trval průměrně okolo 20 sekund ale klidně běžel i 40 sekund
