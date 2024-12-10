@@ -63,6 +63,7 @@ it can run both, for the unix there is function that uses wsl but the program us
 Basic usage: 
 ```
 HamiltonianPath.py [-h] [-i INPUT] [-o OUTPUT] [-s SOLVER] [-v {0,1}] [-c {0,1}]
+or if like py HamiltonianPath.py ... or python HamiltonianPath.py ... depends on your setup
 ```
 or better yet, in visual studio argumenty zadané ve vlastnosti projektu
 
